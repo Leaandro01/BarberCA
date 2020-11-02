@@ -21,6 +21,7 @@ public class Barber_Ca {
         System.out.println("ovelhas");
         System.out.println("Oiiiii");
         System.out.println("Hoje e segunda");
+        System.out.println("algo");
     }   
     
 }
