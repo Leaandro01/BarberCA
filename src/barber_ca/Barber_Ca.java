@@ -16,8 +16,10 @@ public class Barber_Ca {
      */
     public static void main(String[] args) {
         // TODO code application losyougic here
-        System.out.println("lenadro silva");
-        System.out.println("ovelhass");
+
+        System.out.println("Ola tibiANOS");
+        System.out.println("ovelhas");
+
     }
     
 }
