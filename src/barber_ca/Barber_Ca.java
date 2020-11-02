@@ -19,7 +19,7 @@ public class Barber_Ca {
 
         System.out.println("Ola tibiANOS");
         System.out.println("ovelhas");
-
+        System.out.println("Oiiiii");
     }
     
 }
