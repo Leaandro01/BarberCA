@@ -5,6 +5,9 @@
  */
 package barber_ca;
 
+import views.Frame;
+import views.loginComponents.LoginPanel;
+
 /**
  *
  * @author User
@@ -15,12 +18,15 @@ public class Barber_Ca {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        LoginPanel loginPanel = new LoginPanel();
+        
+        Frame mywindowFrame = new Frame( 300, 400, loginPanel);
+        
+       
         // TODO code application losyougic here
 
-        System.out.println("Ola tibiANOS");
-        System.out.println("ovelhas");
-        System.out.println("Oiiiii");
-        System.out.println("Hoje e segunda");
+        
     }   
     
 }
