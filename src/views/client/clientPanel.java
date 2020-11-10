@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package views.loginComponents;
+package views.client;
 
 import java.awt.BorderLayout;
-import static java.awt.SystemColor.text;
-import java.text.Normalizer.Form;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -15,32 +16,38 @@ import javax.swing.JPanel;
  *
  * @author User
  */
-public class LoginPanel  extends JPanel{       
-    
+public class clientPanel extends JPanel implements ActionListener {
+
     private JPanel northSubPanel;
     private JPanel middleSubPanel;
     private JPanel southSubPanel;
-    public LoginPanel(){
-        
+    
+  
+   
+   
+    public clientPanel() {
+       
+
         this.setLayout(new BorderLayout());
         this.northSubPanel = new JPanel();
-        this.middleSubPanel = new LoginFormSubPanel();
+        this.middleSubPanel = new ciientFormSubPanel();
         this.southSubPanel = new JPanel();
-    
+
         this.add(this.northSubPanel, BorderLayout.NORTH);
         this.add(this.middleSubPanel, BorderLayout.CENTER);
         this.add(this.southSubPanel, BorderLayout.SOUTH);
         
-        JLabel northSubPanelLabel = new JLabel("Barber Login");       
-        JLabel southSubPanelLabel = new JLabel ("Almicar CA");
-        
+        JLabel northSubPanelLabel = new JLabel("Client Register");
+        JLabel southSubPanelLabel = new JLabel("Almicar CA");
         
         this.northSubPanel.add(northSubPanelLabel);
         this.southSubPanel.add(southSubPanelLabel);
-        
-        
+
     }
-    
-    
-    
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
