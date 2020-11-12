@@ -3,29 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package views.bookingPanel;
+package views.barberPanel;
 
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import views.client.Barber.BarberFormSubPanel;
+import views.bookingPanel.BookingFormSubPanel;
 
 /**
  *
  * @author User
  */
-public class BookingPanel extends JPanel {
-
+public class BarberPlatform extends JPanel{
     private JPanel northSubPanel;
     private JPanel middleSubPanel;
     private JPanel southSubPanel;
     
-    public BookingPanel (){
+    public BarberPlatform (){
     
     
       this.setLayout(new BorderLayout());
         this.northSubPanel = new JPanel();
-        this.middleSubPanel = new BookingFormSubPanel();
+        this.middleSubPanel = new BarberPlatformFromSubPanel();
         this.southSubPanel = new JPanel();
     
     
@@ -45,6 +44,5 @@ public class BookingPanel extends JPanel {
     
     
     }
-    
     
 }

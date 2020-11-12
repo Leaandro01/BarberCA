@@ -5,10 +5,34 @@
  */
 package views.bookingPanel;
 
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
 /**
  *
  * @author User
  */
-public class BookingFormSubPanel {
+public class BookingFormSubPanel extends JPanel {
+    
+     private JPanel buttonPanel;
+     
+    
+    
+    public BookingFormSubPanel(){
+    
+    this.buttonPanel = new JPanel ();
+   
+    
+    JButton viewBookingbutton = new JButton("View your booking");
+        this.buttonPanel.add(viewBookingbutton);
+    
+    this.setLayout(new GridLayout(5, 1));
+    
+    
+      
+        this.add(this.buttonPanel);
+    
+    }
     
 }

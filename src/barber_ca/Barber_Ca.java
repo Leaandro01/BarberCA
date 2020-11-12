@@ -6,6 +6,8 @@
 package barber_ca;
 
 import views.Frame;
+import views.barberPanel.BarberPlatform;
+import views.bookingPanel.BookingPanel;
 import views.client.Barber.Barberpanel;
 import views.client.clientPanel;
 import views.loginComponents.LoginPanel;
@@ -20,18 +22,21 @@ public class Barber_Ca {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
 //     LoginPanel loginPanel = new LoginPanel();
 //      clientPanel ClientPanel = new clientPanel();
-      //  Frame mywindowFrame = new Frame( 300, 400, loginPanel);
+        //  Frame mywindowFrame = new Frame( 300, 400, loginPanel);
         // Frame mywindowFrame = new Frame( 300, 400, ClientPanel);
 //       
           Barberpanel barberPanel = new Barberpanel();
-         Frame mywindowFrame = new Frame( 400, 400, barberPanel);
-//        
-        // TODO code application losyougic here
+           Frame mywindowFrame = new Frame( 400, 400, barberPanel);
+//        BookingPanel bookingPanel = new BookingPanel();
+//       Frame mywindowFrame = new Frame(400, 400, bookingPanel);
+////        
+//        BarberPlatform barberplatform = new BarberPlatform();
+//        Frame mywindowFrame = new Frame(400, 400, barberplatform);
 
-        
-    }   
-    
+        // TODO code application losyougic here
+    }
+
 }
