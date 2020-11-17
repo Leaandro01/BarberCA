@@ -29,8 +29,8 @@ public class Barber_Ca {
         //  Frame mywindowFrame = new Frame( 300, 400, loginPanel);
         // Frame mywindowFrame = new Frame( 300, 400, ClientPanel);
 //       
-          Barberpanel barberPanel = new Barberpanel();
-           Frame mywindowFrame = new Frame( 400, 400, barberPanel);
+//          Barberpanel barberPanel = new Barberpanel();
+//           Frame mywindowFrame = new Frame( 400, 400, barberPanel);
 //        BookingPanel bookingPanel = new BookingPanel();
 //       Frame mywindowFrame = new Frame(400, 400, bookingPanel);
 ////        
