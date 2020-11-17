@@ -1,15 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package views.loginComponents;
 
+import controllers.Controller;
 import java.awt.BorderLayout;
 import static java.awt.SystemColor.text;
 import java.text.Normalizer.Form;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import javax.swing.JButton;
+
+import javax.swing.JButton;
+
+import javax.swing.JButton;
+
+import javax.swing.JButton;
 
 /**
  *
@@ -18,7 +24,7 @@ import javax.swing.JPanel;
 public class LoginPanel  extends JPanel{       
     
     private JPanel northSubPanel;
-    private JPanel middleSubPanel;
+    private LoginFormSubPanel middleSubPanel;
     private JPanel southSubPanel;
     public LoginPanel(){
         
@@ -41,6 +47,14 @@ public class LoginPanel  extends JPanel{
         
     }
     
+    public JButton getSingupButton(){
     
+    return this.middleSubPanel.getSingupButton();
+    
+    }
+
+    public JButton getSingupButton(Controller aThis) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

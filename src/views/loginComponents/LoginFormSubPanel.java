@@ -22,6 +22,9 @@ public class LoginFormSubPanel extends JPanel{
     private JPanel emailPanel;
     private JPanel passwordPanel;
     private JPanel buttonsPanel;
+    private JButton signupButton;
+    private JButton signinButton;
+    
     
     
     /**
@@ -32,6 +35,9 @@ public class LoginFormSubPanel extends JPanel{
         this.emailPanel = new JPanel();
         this.passwordPanel = new JPanel();
         this.buttonsPanel = new JPanel();
+        
+        this.emailPanel.setLayout(new GridLayout(1, 2));
+        this.passwordPanel.setLayout(new GridLayout(1,2));
         
         // initialinig labels and textfield for the emailPanel
         JTextField emailTextField = new JTextField(10);
@@ -44,8 +50,8 @@ public class LoginFormSubPanel extends JPanel{
         this.passwordPanel.add(passwordLabel);
         this.passwordPanel.add(passwordField);
         
-        JButton signinButton = new JButton ("Signin");
-        JButton signupButton = new JButton ("Signup");
+        this.signupButton = new JButton ("Signin");
+        this.signinButton = new JButton ("Signup");
         this.buttonsPanel.add(signinButton);
         this.buttonsPanel.add(signupButton);
         
@@ -69,6 +75,13 @@ public class LoginFormSubPanel extends JPanel{
         
         
         
-    }   
+    }  
     
+    //Getter for signup button
+    
+   public JButton getSingupButton(){
+    
+    return signupButton;
+    
+    }
 }

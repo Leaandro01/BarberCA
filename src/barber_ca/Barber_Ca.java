@@ -5,6 +5,7 @@
  */
 package barber_ca;
 
+import controllers.Controller;
 import views.Frame;
 import views.barberPanel.BarberPlatform;
 import views.bookingPanel.BookingPanel;
@@ -37,6 +38,8 @@ public class Barber_Ca {
 //        Frame mywindowFrame = new Frame(400, 400, barberplatform);
 
         // TODO code application losyougic here
+        new Controller();
     }
+    
 
 }
