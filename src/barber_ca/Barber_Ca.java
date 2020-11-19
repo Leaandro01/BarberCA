@@ -8,6 +8,7 @@ package barber_ca;
 import controllers.Controller;
 import views.Frame;
 import views.barberPanel.BarberPlatform;
+import views.bookingPanelComponents.BookingPanel;
 
 import views.bookingPlatform.BookingPlatform;
 import views.client.Barber.Barberpanel;
@@ -31,14 +32,21 @@ public class Barber_Ca {
 //       
 //          Barberpanel barberPanel = new Barberpanel();
 //           Frame mywindowFrame = new Frame( 400, 400, barberPanel);
-   BookingPlatform bookingPanel = new BookingPlatform();
-    Frame mywindowFrame = new Frame(400, 400, bookingPanel);
+ //  BookingPlatform bookingPanel = new BookingPlatform();
+   // Frame mywindowFrame = new Frame(400, 400, bookingPanel);
 ////        
 //        BarberPlatform barberplatform = new BarberPlatform();
 //        Frame mywindowFrame = new Frame(400, 400, barberplatform);
 
         // TODO code application losyougic here
-        new Controller();
+     //  new Controller();
+        BookingPanel bookingpanel = new BookingPanel();
+        new Frame( 800,700,bookingpanel);
+     
+     
+     
+     
+     
     }
 
 }
