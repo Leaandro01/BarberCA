@@ -8,6 +8,7 @@ package views.barberPanel;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import views.bookingPanel.BookingFormSubPanel;
 
 /**
  *
