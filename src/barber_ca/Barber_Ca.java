@@ -40,11 +40,11 @@ public class Barber_Ca {
 
         // TODO code application losyougic here
      //  new Controller();
-        BookingPanel bookingpanel = new BookingPanel();
-        new Frame( 800,700,bookingpanel);
+       // BookingPanel bookingpanel = new BookingPanel();
+     //   new Frame( 800,700,bookingpanel);
      
      
-     
+        new Controller();
      
      
     }
