@@ -32,7 +32,7 @@ public class BarberPlatform extends JPanel{
         this.add(this.middleSubPanel, BorderLayout.CENTER);
         this.add(this.southSubPanel, BorderLayout.SOUTH);
         
-        JLabel northSubPanelLabel = new JLabel("Barber Register");       
+        JLabel northSubPanelLabel = new JLabel("Barber Platform");       
         JLabel southSubPanelLabel = new JLabel ("Almicar CA");
         
         

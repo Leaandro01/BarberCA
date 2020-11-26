@@ -10,7 +10,6 @@ import views.Frame;
 import views.barberPanel.BarberPlatform;
 import views.bookingPanelComponents.BookingPanel;
 
-import views.bookingPlatform.BookingPlatform;
 import views.client.Barber.Barberpanel;
 import views.loginComponents.LoginPanel;
 
@@ -25,28 +24,19 @@ public class Barber_Ca {
      */
     public static void main(String[] args) {
 
-//     LoginPanel loginPanel = new LoginPanel();
-//      clientPanel ClientPanel = new clientPanel();
-        //  Frame mywindowFrame = new Frame( 300, 400, loginPanel);
-        // Frame mywindowFrame = new Frame( 300, 400, ClientPanel);
 //       
-//          Barberpanel barberPanel = new Barberpanel();
-//           Frame mywindowFrame = new Frame( 400, 400, barberPanel);
- //  BookingPlatform bookingPanel = new BookingPlatform();
-   // Frame mywindowFrame = new Frame(400, 400, bookingPanel);
+        // Barberpanel barberPanel = new Barberpanel();
+        //  Frame mywindowFrame = new Frame( 400, 400, barberPanel);
 ////        
-      BarberPlatform barberplatform = new BarberPlatform();
-       Frame mywindowFrame = new Frame(400, 400, barberplatform);
-
+        //BarberPlatform barberplatform = new BarberPlatform();
+       // Frame mywindowFrame = new Frame(400, 400, barberplatform);
         // TODO code application losyougic here
-     //  new Controller();
-       // BookingPanel bookingpanel = new BookingPanel();
-     //   new Frame( 800,700,bookingpanel);
-     
-     
-        //new Controller();
-     
-     
+        // new Controller();
+        //BookingPanel bookingpanel = new BookingPanel();
+        // new Frame(800, 700, bookingpanel);
+        //
+
+        // new Controller();
     }
 
 }
