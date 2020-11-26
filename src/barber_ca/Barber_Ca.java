@@ -35,8 +35,8 @@ public class Barber_Ca {
  //  BookingPlatform bookingPanel = new BookingPlatform();
    // Frame mywindowFrame = new Frame(400, 400, bookingPanel);
 ////        
-//        BarberPlatform barberplatform = new BarberPlatform();
-//        Frame mywindowFrame = new Frame(400, 400, barberplatform);
+      BarberPlatform barberplatform = new BarberPlatform();
+       Frame mywindowFrame = new Frame(400, 400, barberplatform);
 
         // TODO code application losyougic here
      //  new Controller();
@@ -44,7 +44,7 @@ public class Barber_Ca {
      //   new Frame( 800,700,bookingpanel);
      
      
-        new Controller();
+        //new Controller();
      
      
     }
