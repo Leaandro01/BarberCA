@@ -27,16 +27,16 @@ public class Barber_Ca {
 //       
         // Barberpanel barberPanel = new Barberpanel();
         //  Frame mywindowFrame = new Frame( 400, 400, barberPanel);
-////        
-        //BarberPlatform barberplatform = new BarberPlatform();
-       // Frame mywindowFrame = new Frame(400, 400, barberplatform);
+        
+      //  BarberPlatform barberplatform = new BarberPlatform();
+        //Frame mywindowFrame = new Frame(400, 400, barberplatform);
         // TODO code application losyougic here
         // new Controller();
         //BookingPanel bookingpanel = new BookingPanel();
         // new Frame(800, 700, bookingpanel);
         //
 
-        // new Controller();
+       // new Controller();
     }
 
 }
