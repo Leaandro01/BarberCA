@@ -68,7 +68,7 @@ public void  switchLocationState(){
         } else if (actionEvent.getActionCommand().equals("locationTrigger")) {
             switchLocationState();
             
-        } else {
+        } if else {
         }
     }
 

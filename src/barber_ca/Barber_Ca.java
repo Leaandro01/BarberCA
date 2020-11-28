@@ -1,42 +1,49 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package barber_ca;
+//import controllers.Controller;
+import models.DatabaseConnector;
 
-import controllers.Controller;
-import views.Frame;
-import views.barberPanel.BarberPlatform;
-import views.bookingPanelComponents.BookingPanel;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-import views.client.Barber.Barberpanel;
-import views.loginComponents.LoginPanel;
-
-/**
- *
- * @author User
- */
 public class Barber_Ca {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
 
-//       
-        // Barberpanel barberPanel = new Barberpanel();
-        //  Frame mywindowFrame = new Frame( 400, 400, barberPanel);
-        
-      //  BarberPlatform barberplatform = new BarberPlatform();
-        //Frame mywindowFrame = new Frame(400, 400, barberplatform);
-        // TODO code application losyougic here
-        // new Controller();
-        //BookingPanel bookingpanel = new BookingPanel();
-        // new Frame(800, 700, bookingpanel);
-        //
+    Barber_Ca(){
+        //new Controller();
 
-       // new Controller();
+        DatabaseConnector databaseConnector = new DatabaseConnector();
+
+        Connection connection = databaseConnector.getConnection();
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("select * from user;");
+            System.out.println("id | name | email | phone");
+            System.out.println("__________________________");
+            System.out.println();
+            while (resultSet.next()){ // <- cursor - Iterator
+                System.out.print(resultSet.getString("user_id") + "  | ");
+                System.out.print(resultSet.getString("full_name") +" | ");
+                System.out.print(resultSet.getString("email_address") + " | ");
+                System.out.print(resultSet.getString("phone_number"));
+
+                System.out.println();
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
     }
 
+
+
+    public static void main(String[] args) {
+	// write your code here
+        new Barber_Ca();
+
+    }
 }
