@@ -19,12 +19,14 @@ import javax.swing.JTextField;
  */
 public class LoginFormSubPanel extends JPanel{
     
+  
     private JPanel emailPanel;
     private JPanel passwordPanel;
     private JPanel buttonsPanel;
     private JButton signupButton;
     private JButton signinButton;
-    
+    private JTextField emailTextField;
+    private JPasswordField passwordField;
     
     
     /**
@@ -32,56 +34,68 @@ public class LoginFormSubPanel extends JPanel{
      */
     LoginFormSubPanel(){
         
-        this.emailPanel = new JPanel();
-        this.passwordPanel = new JPanel();
-        this.buttonsPanel = new JPanel();
-        
-        this.emailPanel.setLayout(new GridLayout(1, 2));
-        this.passwordPanel.setLayout(new GridLayout(1,2));
-        
-        // initialinig labels and textfield for the emailPanel
-        JTextField emailTextField = new JTextField(10);
+         // Initialize the variables
+        emailPanel = new JPanel();
+        passwordPanel = new JPanel();
+        buttonsPanel = new JPanel();
+
+
+
+        // Assigning a grid layout to emailPanel and npassword Panel
+        emailPanel.setLayout(new GridLayout(1,2));
+        passwordPanel.setLayout(new GridLayout(1,2));
+
+
+        // initializing labels and textfield for the emailPanel
         JLabel emailLabel = new JLabel("Email");
-        this.emailPanel.add(emailLabel);
-        this.emailPanel.add(emailTextField);
-        
-        JTextField passwordField = new JPasswordField(10);
+        emailTextField = new JTextField(10);
+
+        emailPanel.add(emailLabel);
+        emailPanel.add(emailTextField);
+
+        // initializing labels and textfield for the password Panel
         JLabel passwordLabel = new JLabel("Password");
-        this.passwordPanel.add(passwordLabel);
-        this.passwordPanel.add(passwordField);
-        
-        this.signupButton = new JButton ("Signin");
-        this.signinButton = new JButton ("Signup");
+        passwordField = new JPasswordField(10);
+        passwordPanel.add(passwordLabel);
+        passwordPanel.add(passwordField);
+
+        // initializing labels and textfield for the emailPanel
+        signinButton = new JButton("Signin");
+        this.signupButton = new JButton("Signup");
         this.buttonsPanel.add(signinButton);
         this.buttonsPanel.add(signupButton);
-        
-        //settin
-        
-        this.setLayout(new GridLayout(9,1));
+
+        // Setting upp GridLayout Manager
+        this.setLayout(new GridLayout(9, 1));
+
         this.add(new JLabel());
         this.add(new JLabel());
         this.add(new JLabel());
-        
-        
         this.add(this.emailPanel);
         this.add(this.passwordPanel);
         this.add(new JLabel());
         this.add(new JLabel());
-        
-        
-        this.add(this.buttonsPanel);  
+        this.add(this.buttonsPanel);
         this.add(new JLabel());
-        
-        
-        
-        
-    }  
-    
-    //Getter for signup button
-    
-   public JButton getSingupButton(){
-    
-    return signupButton;
-    
     }
+
+    /**
+     * Getter for the signup button
+     */
+    public JButton getSignupButton(){
+        return signupButton;
+    }
+
+    public JButton getSigninButton(){
+        return signinButton;
+    }
+
+    public String getEmail(){
+        return emailTextField.getText();
+    }
+
+    public String getPassword(){
+        return new String(passwordField.getPassword());
+    }
+
 }
