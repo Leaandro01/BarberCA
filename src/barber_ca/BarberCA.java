@@ -18,7 +18,7 @@ public class BarberCA {
 
     BarberCA(){
         Controller controllerr= new Controller();
-        new Controller();
+        //new Controller();
 
     }
 
