@@ -23,38 +23,48 @@ import javax.swing.JButton;
  */
 public class LoginPanel  extends JPanel{       
     
-    private JPanel northSubPanel;
-    private LoginFormSubPanel middleSubPanel;
-    private JPanel southSubPanel;
+   private final JPanel northSubPanel;
+    private final LoginFormSubPanel middleSubPanel;
+    private final JPanel southSubPanel;
     public LoginPanel(){
-        
-        this.setLayout(new BorderLayout());
+         this.setLayout(new BorderLayout());
+
+        // Initializing variables
         this.northSubPanel = new JPanel();
         this.middleSubPanel = new LoginFormSubPanel();
         this.southSubPanel = new JPanel();
-    
+
+
+
+        // Adding the variables to this Login Panel
         this.add(this.northSubPanel, BorderLayout.NORTH);
         this.add(this.middleSubPanel, BorderLayout.CENTER);
         this.add(this.southSubPanel, BorderLayout.SOUTH);
-        
-        JLabel northSubPanelLabel = new JLabel("Barber Login");       
-        JLabel southSubPanelLabel = new JLabel ("Almicar CA");
-        
-        
+
+        // Creating labels for each Panel
+        JLabel northSubPanelLabel = new JLabel("Login");
+        JLabel southSubPanelLabel = new JLabel("Amilcar CA");
+
+        // Adding the northSubPanelLabel to the northSubPanel
         this.northSubPanel.add(northSubPanelLabel);
         this.southSubPanel.add(southSubPanelLabel);
-        
-        
-    }
-    
-    public JButton getSingupButton(){
-    
-    return this.middleSubPanel.getSingupButton();
-    
+
+
     }
 
-    public JButton getSingupButton(Controller aThis) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public JButton getSignupButton(){
+        return middleSubPanel.getSignupButton();
     }
-    
+
+    public JButton getSigninButton(){
+        return middleSubPanel.getSigninButton();
+    }
+
+    public String getEmail(){
+        return middleSubPanel.getEmail();
+    }
+
+    public String getPassword(){
+        return middleSubPanel.getPassword();
+    }
 }
