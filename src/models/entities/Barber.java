@@ -2,8 +2,7 @@ package models.entities;
 
 import java.util.List;
 
-public class Barber extends User{
-
+public class Barber extends User {
     private String location;
 
     public Barber(int id, String fullName, String email, String phone, String password, List<Booking> bookingList, String location) {
