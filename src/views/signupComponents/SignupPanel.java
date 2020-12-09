@@ -1,123 +1,167 @@
-
 package views.signupComponents;
 
-import java.awt.BorderLayout;
-import java.awt.GridLayout;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
+import javax.swing.*;
+import java.awt.*;
 
 public class SignupPanel extends JPanel {
-    private JPanel headersPanel = new JPanel();
-    private JPanel middlePanel = new JPanel();
-    private JPanel southPanel = new JPanel();
-    private JPanel emailPanel = new JPanel();
-    private JPanel phonePanel = new JPanel();
-    private JPanel passwordPanel = new JPanel();
-    private JPanel locationPanel = new JPanel();
-    private JPanel userTypePanel = new JPanel();
-    private JPanel fullNamePanel = new JPanel();
+
+
+    private JPanel headersPanel;
+    private JPanel middlePanel;
+    private JPanel southPanel;
+    private JPanel emailPanel;
+    private JPanel phonePanel;
+    private JPanel passwordPanel;
+    private JPanel locationPanel;
+    private JPanel userTypePanel;
+    private JPanel fullNamePanel;
     private JComboBox<String> userTypeComboBox;
     private JTextField emailTextField;
-    private JTextField phoneTextField = new JTextField();
-    private JPasswordField passwordTextField = new JPasswordField();
+    private JTextField phoneTextField;
+    private JPasswordField passwordTextField;
     private JTextField locationTextField;
-    private JTextField fullNameTextField = new JTextField();
-    private JButton signup = new JButton("Register");
-    private JButton backToLogin = new JButton("Back");
+    private JTextField fullNameTextField;
 
-    public SignupPanel() {
-        this.emailPanel.setLayout(new GridLayout(1, 2));
-        this.locationPanel.setLayout(new GridLayout(1, 2));
-        this.userTypePanel.setLayout(new GridLayout(1, 2));
-        this.locationPanel.setVisible(false);
-        this.userTypeComboBox = new JComboBox(new String[]{"customer", "service provider"});
-        this.emailTextField = new JTextField();
-        this.locationTextField = new JTextField();
+    private JButton signup;
+    private JButton backToLogin;
+
+
+    public SignupPanel(){
+
+        signup = new JButton( "Register");
+        backToLogin = new JButton( "Back");
+        southPanel = new JPanel();
+        fullNamePanel= new JPanel();
+
+        fullNameTextField = new JTextField();
+        headersPanel = new JPanel();
+        middlePanel = new JPanel();
+        emailPanel = new JPanel();
+        locationPanel = new JPanel();
+        userTypePanel = new JPanel();
+        phonePanel = new JPanel();
+        passwordPanel = new JPanel();
+        phoneTextField = new JTextField();
+        passwordTextField = new JPasswordField();
+
+
+
+        emailPanel.setLayout(new GridLayout(1,2));
+        locationPanel.setLayout(new GridLayout(1,2));
+        userTypePanel.setLayout(new GridLayout(1,2));
+        locationPanel.setVisible(false);
+
+
+        userTypeComboBox = new JComboBox(new String[]{"customer", "service provider"});
+
+        emailTextField = new JTextField();
+        locationTextField = new JTextField();
+
         JLabel emailLabel = new JLabel("Email");
         JLabel userTypeLabel = new JLabel("User Type");
         JLabel locationLabel = new JLabel("Location");
-        this.emailPanel.add(emailLabel);
-        this.emailPanel.add(this.emailTextField);
-        this.locationPanel.add(locationLabel);
-        this.locationPanel.add(this.locationTextField);
-        this.userTypePanel.add(userTypeLabel);
-        this.userTypePanel.add(this.userTypeComboBox);
-        this.middlePanel.add(this.userTypePanel);
-        this.middlePanel.add(new JLabel());
-        this.middlePanel.add(new JLabel());
-        this.middlePanel.add(new JLabel());
-        this.middlePanel.add(this.emailPanel);
-        this.middlePanel.add(this.fullNamePanel);
-        this.fullNamePanel.add(new JLabel("Full Name"));
-        this.fullNamePanel.add(this.fullNameTextField);
-        this.fullNamePanel.setLayout(new GridLayout(1, 2));
-        this.phonePanel.setLayout(new GridLayout(1, 2));
-        this.passwordPanel.setLayout(new GridLayout(1, 2));
-        this.phonePanel.add(new JLabel("Phone Number"));
-        this.phonePanel.add(this.phoneTextField);
-        this.passwordPanel.add(new JLabel("Password"));
-        this.passwordPanel.add(this.passwordTextField);
-        this.middlePanel.add(this.passwordPanel);
-        this.middlePanel.add(this.phonePanel);
-        this.middlePanel.add(this.locationPanel);
-        this.middlePanel.setLayout(new GridLayout(10, 1));
-        this.southPanel.add(new JLabel());
-        this.southPanel.add(this.backToLogin);
-        this.southPanel.add(new JLabel());
-        this.southPanel.add(this.signup);
-        this.southPanel.add(new JLabel());
-        this.southPanel.setLayout(new GridLayout(1, 5));
+
+        emailPanel.add(emailLabel);
+        emailPanel.add(emailTextField);
+
+        locationPanel.add(locationLabel);
+        locationPanel.add(locationTextField);
+
+        userTypePanel.add(userTypeLabel);
+        userTypePanel.add(userTypeComboBox);
+
+        middlePanel.add(userTypePanel);
+        middlePanel.add(new JLabel());
+        middlePanel.add(new JLabel());
+        middlePanel.add(new JLabel());
+        middlePanel.add(emailPanel);
+        middlePanel.add(fullNamePanel);
+
+        fullNamePanel.add(new JLabel("Full Name"));
+        fullNamePanel.add(fullNameTextField);
+
+
+        fullNamePanel.setLayout( new GridLayout(1,2));
+        phonePanel.setLayout(new GridLayout(1,2));
+        passwordPanel.setLayout(new GridLayout(1,2));
+
+
+        phonePanel.add(new JLabel("Phone Number"));
+        phonePanel.add(phoneTextField);
+        passwordPanel.add(new JLabel("Password"));
+        passwordPanel.add(passwordTextField);
+
+        middlePanel.add(passwordPanel);
+        middlePanel.add(phonePanel);
+        middlePanel.add(locationPanel);
+
+
+
+        middlePanel.setLayout(new GridLayout(10, 1));
+
+        southPanel.add(new JLabel());
+        southPanel.add(backToLogin);
+        southPanel.add( new JLabel());
+        southPanel.add(signup);
+        southPanel.add(new JLabel());
+
+        southPanel.setLayout(new GridLayout(1,5));
+
+
+
         this.setLayout(new BorderLayout());
-        this.add(this.headersPanel, "North");
-        this.add(this.middlePanel, "Center");
-        this.add(this.southPanel, "South");
+        this.add(headersPanel, BorderLayout.NORTH);
+        this.add(middlePanel, BorderLayout.CENTER);
+        this.add(southPanel, BorderLayout.SOUTH);
+
         JLabel signupLabel = new JLabel("Signup page");
-        this.headersPanel.add(signupLabel);
+        headersPanel.add(signupLabel);
+
     }
 
-    public void changeLocationState() {
-        String selectedUserType = (String)this.userTypeComboBox.getItemAt(this.userTypeComboBox.getSelectedIndex());
-        if (selectedUserType.equals("customer")) {
-            this.locationPanel.setVisible(false);
-        } else {
-            this.locationPanel.setVisible(true);
+    public void changeLocationState(){
+        String selectedUserType = userTypeComboBox.getItemAt(userTypeComboBox.getSelectedIndex()); // customer - service provider
+        if(selectedUserType.equals("customer")){
+            locationPanel.setVisible(false);
+        }else{
+            locationPanel.setVisible(true);
         }
-
     }
 
-    public JComboBox<String> getUserTypeComboBox() {
-        return this.userTypeComboBox;
+
+    public JComboBox<String> getUserTypeComboBox(){
+        return userTypeComboBox;
     }
 
     public String getUserType() {
-        return (String)this.userTypeComboBox.getSelectedItem();
+        return (String) userTypeComboBox.getSelectedItem();
     }
 
     public String getFullName() {
-        return this.fullNameTextField.getText();
+        return fullNameTextField.getText();
     }
 
     public String getEmail() {
-        return this.emailTextField.getText();
+        return emailTextField.getText();
     }
 
     public String getPhone() {
-        return this.phoneTextField.getText();
+        return phoneTextField.getText();
     }
 
     public String getPassword() {
-        return new String(this.passwordTextField.getPassword());
+        return new  String(passwordTextField.getPassword());
     }
 
     public String getLocationText() {
-        return this.locationTextField.getText();
+        return locationTextField.getText();
     }
 
     public JButton getSignup() {
-        return this.signup;
+        return signup;
+    }
+
+    public JButton getBackToLogin() {
+        return backToLogin;
     }
 }
