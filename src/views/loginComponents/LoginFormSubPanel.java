@@ -1,25 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package views.loginComponents;
+package views.loginsComponents;
 
-import java.awt.GridLayout;
-import java.awt.PopupMenu;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
+import javax.swing.*;
+import java.awt.*;
 
-/**
- *
- * @author User
- */
-public class LoginFormSubPanel extends JPanel{
-    
-  
+public class LoginFormSubPanel extends JPanel {
+
+
     private JPanel emailPanel;
     private JPanel passwordPanel;
     private JPanel buttonsPanel;
@@ -27,14 +13,12 @@ public class LoginFormSubPanel extends JPanel{
     private JButton signinButton;
     private JTextField emailTextField;
     private JPasswordField passwordField;
-    
-    
+
     /**
-     * I'm not leaving it public because only LoginPanel will be the the client.
+     * I'm not leaving it public because only LoginPanel will be the client of this class therefore they are in the same package.
      */
-    LoginFormSubPanel(){
-        
-         // Initialize the variables
+    public LoginFormSubPanel(){
+        // Initialize the variables
         emailPanel = new JPanel();
         passwordPanel = new JPanel();
         buttonsPanel = new JPanel();
@@ -99,3 +83,7 @@ public class LoginFormSubPanel extends JPanel{
     }
 
 }
+
+
+
+

@@ -1,33 +1,18 @@
+package views.loginsComponents;
 
-package views.loginComponents;
+import javax.swing.*;
+import java.awt.*;
 
-import controllers.Controller;
-import java.awt.BorderLayout;
-import static java.awt.SystemColor.text;
-import java.text.Normalizer.Form;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+public class LoginPanel extends JPanel {
 
-import javax.swing.JButton;
-
-import javax.swing.JButton;
-
-import javax.swing.JButton;
-
-import javax.swing.JButton;
-
-/**
- *
- * @author User
- */
-public class LoginPanel  extends JPanel{       
-    
-   private final JPanel northSubPanel;
+    private final JPanel northSubPanel;
     private final LoginFormSubPanel middleSubPanel;
     private final JPanel southSubPanel;
+
+
     public LoginPanel(){
-         this.setLayout(new BorderLayout());
+
+        this.setLayout(new BorderLayout());
 
         // Initializing variables
         this.northSubPanel = new JPanel();
