@@ -1,5 +1,9 @@
 package models;
 
 public enum UserTypes {
-    CUSTOMER, BARBER;
+    CUSTOMER,
+    BARBER;
+
+    private UserTypes() {
+    }
 }
