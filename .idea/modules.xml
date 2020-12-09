@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/BarberCA.iml" filepath="$PROJECT_DIR$/BarberCA.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/BarberCA1.iml" filepath="$PROJECT_DIR$/src/BarberCA1.iml" />
-=======
       <module fileurl="file://$PROJECT_DIR$/.idea/Barber_Ca.iml" filepath="$PROJECT_DIR$/.idea/Barber_Ca.iml" />
->>>>>>> d1b00e776057187bf315b8f832460a9ff79c962c
     </modules>
   </component>
 </project>
