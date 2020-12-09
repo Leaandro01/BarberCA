@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package models;
 
 import java.sql.Connection;
@@ -10,26 +5,34 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnector {
+
     private Connection connection;
-    private String bankUrl = "localhost";
-    private String bankName = "barber_system";
-    private String user = "root";
-    private String password = "";
+    private String bankUrl;
+    private String bankName;
+    private String user;
+    private String password;
 
     public DatabaseConnector() {
+
+        bankUrl = "localhost"; // @TODO: Change to "52.50.23.197"
+        bankName = "barber_system";
+        user = "root"; // @TODO: Change it to "Rafael_2019335"
+        password = ""; // @TODO: Change it to "2019335"
+
+
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            this.connection = DriverManager.getConnection("jdbc:mysql://" + this.bankUrl + "/" + this.bankName, this.user, this.password);
+            Class.forName("com.mysql.jdbc.Driver"); // "jdbc:mysql://localhost/barber_system
+            connection = DriverManager.getConnection("jdbc:mysql://"+bankUrl+"/"+bankName, user, password);
             System.out.println("Conectou no banco de dados.");
-        } catch (SQLException var2) {
+        } catch (SQLException ex) {
             System.out.println("Erro: Não conseguiu conectar no BD.");
-        } catch (ClassNotFoundException var3) {
+        } catch (ClassNotFoundException ex) {
             System.out.println("Erro: Não encontrou o driver do BD.");
         }
-
     }
 
+
     public Connection getConnection() {
-        return this.connection;
+        return connection;
     }
 }

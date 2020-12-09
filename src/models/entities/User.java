@@ -1,13 +1,9 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package models.entities;
 
 import java.util.List;
 
 public class User {
+
     private Integer id;
     private String fullName;
     private String email;
@@ -49,26 +45,26 @@ public class User {
     }
 
     public Integer getId() {
-        return this.id;
+        return id;
     }
 
     public String getFullName() {
-        return this.fullName;
+        return fullName;
     }
 
     public String getEmail() {
-        return this.email;
+        return email;
     }
 
     public String getPhone() {
-        return this.phone;
+        return phone;
     }
 
     public String getPassword() {
-        return this.password;
+        return password;
     }
 
     public List<Booking> getBookingList() {
-        return this.bookingList;
+        return bookingList;
     }
 }
