@@ -1,2 +1,0 @@
-controllers.Controller
-BarberCA
