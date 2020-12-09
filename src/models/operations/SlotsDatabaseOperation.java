@@ -14,7 +14,8 @@ public class SlotsDatabaseOperation implements DatabaseOperation<Slots>{
     }
 
     @Override
-    public void insert(Slots slots) {
+    public Boolean insert(Slots slots) {
+        return false;
 
     }
 

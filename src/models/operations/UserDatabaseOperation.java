@@ -74,7 +74,45 @@ public class UserDatabaseOperation implements DatabaseOperation<User>{
     }
 
     @Override
-    public void insert(User user) {
+    public Boolean insert(User user) {
+        DatabaseConnector databaseConnector = new DatabaseConnector();
+        Connection connection = databaseConnector.getConnection();
+
+        try {
+            Statement statement = connection.createStatement();
+            String fullName = user.getFullName();
+            String email =user.getEmail();
+            UserTypes type = user instanceof  Customer ? UserTypes.CUSTOMER: UserTypes.BARBER; // <- tenary expression
+            String password = user.getPassword();
+            String phone = user.getPhone();
+
+
+            String query = "insert into user (full_name,email_address,type,password,phone_number) value('"+fullName+"','"+email+"','"+type+"','"+password+"','"+phone+"')";
+
+
+
+
+            boolean wasInserted =  !statement.execute(query);
+
+            if(type.equals("barber")) {
+                //Get the ID of this new user;
+                Barber barber = (Barber) select(user); //Down Casting
+                Barber castedUser = (Barber) user;
+                int id = barber.getId();
+                query = "insert into barber_hairdressers value ('"+id+"','"+castedUser.getLocation()+"');";
+                wasInserted &= !statement.execute(query); // AND TRUE OR FALSE
+            }
+
+            return wasInserted;
+
+
+
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+            return false;
+        }
+
 
     }
 
