@@ -3,10 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-
-
+            <file>file:/C:/Users/User/Desktop/BarberCA/src/models/entities/User.java</file>
+            <file>file:/C:/Users/User/Desktop/BarberCA/src/models/UserTypes.java</file>
             <file>file:/C:/Users/User/Desktop/BarberCA/src/barber_ca/BarberCA.java</file>
-
+            <file>file:/C:/Users/User/Desktop/BarberCA/src/models/entities/Customer.java</file>
+            <file>file:/C:/Users/User/Desktop/BarberCA/src/models/entities/Barber.java</file>
+            <file>file:/C:/Users/User/Desktop/BarberCA/src/models/entities/Booking.java</file>
         </group>
     </open-files>
 </project-private>
