@@ -3,12 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/User/Desktop/BarberCA/src/models/entities/User.java</file>
             <file>file:/C:/Users/User/Desktop/BarberCA/src/models/UserTypes.java</file>
             <file>file:/C:/Users/User/Desktop/BarberCA/src/barber_ca/BarberCA.java</file>
             <file>file:/C:/Users/User/Desktop/BarberCA/src/models/entities/Customer.java</file>
             <file>file:/C:/Users/User/Desktop/BarberCA/src/models/entities/Barber.java</file>
             <file>file:/C:/Users/User/Desktop/BarberCA/src/models/entities/Booking.java</file>
+=======
+            <file>file:/C:/Users/leand/OneDrive/Barber_Ca/src/controllers/Controller.java</file>
+            <file>file:/C:/Users/leand/OneDrive/Barber_Ca/src/barber_ca/BarberCA.java</file>
+            <file>file:/C:/Users/leand/OneDrive/Barber_Ca/src/views/loginComponents/LoginFormSubPanel.java</file>
+            <file>file:/C:/Users/leand/OneDrive/Barber_Ca/src/models/operations/UserDatabaseOperation.java</file>
+>>>>>>> d1b00e776057187bf315b8f832460a9ff79c962c
         </group>
     </open-files>
 </project-private>
