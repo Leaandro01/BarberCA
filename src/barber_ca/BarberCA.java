@@ -17,15 +17,15 @@ public class BarberCA {
 
 
     BarberCA(){
-       // Controller controllerr= new Controller();
         new Controller();
+      //  new Frame(800, 800, new BookingPanel);
 
     }
 
 
 
     public static void main(String[] args) {
-	// write your code here
+  // write your code here
         new BarberCA();
 
     }
