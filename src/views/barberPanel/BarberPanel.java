@@ -6,25 +6,23 @@
 package views.barberPanel;
 
 import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-//import views.bookingPanel.BookingFormSubPanel;
 
-/**
- *
- * @author User
- */
-public class BarberPlatform extends JPanel{
+public class BarberPanel extends JPanel {
+
     private JPanel northSubPanel;
-    private JPanel middleSubPanel;
+    private BaberPlatformSubPanel middleSubPanel;
     private JPanel southSubPanel;
     
-    public BarberPlatform (){
+    public BarberPanel (){
     
     
       this.setLayout(new BorderLayout());
         this.northSubPanel = new JPanel();
-        this.middleSubPanel = new BarberPlatformFromSubPanel();
+        this.middleSubPanel = new BaberPlatformSubPanel();
         this.southSubPanel = new JPanel();
     
     
@@ -32,17 +30,22 @@ public class BarberPlatform extends JPanel{
         this.add(this.middleSubPanel, BorderLayout.CENTER);
         this.add(this.southSubPanel, BorderLayout.SOUTH);
         
-        JLabel northSubPanelLabel = new JLabel("Barber Platform");       
+        JLabel northSubPanelLabel = new JLabel("Barber Register");       
         JLabel southSubPanelLabel = new JLabel ("Almicar CA");
         
         
         this.northSubPanel.add(northSubPanelLabel);
         this.southSubPanel.add(southSubPanelLabel);
         
-    
-    
-    
-    
+        
+        
+        
+
     }
     
+    public JButton getSlotesButton() {
+
+        return middleSubPanel.getSlotesTable();
+
+    }
 }

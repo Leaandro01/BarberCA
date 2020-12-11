@@ -10,10 +10,11 @@ import views.bookingPanelComponents.BookingPanel;
 import views.signupComponents.SignupPanel;
 import views.loginsComponents.LoginPanel;
 
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import views.barberPanel.BarberPanel;
+import views.slotesPlatform.SlotesPanel;
 
 public class Controller implements ActionListener {
 
@@ -24,22 +25,26 @@ public class Controller implements ActionListener {
     private final Frame bookingsFrame;
     private final BookingPanel bookingsPanel;
     private User loggedInUser;
-
+    private final BarberPanel barberPanel;
+    private SlotesPanel slotesPanel;
 
     public Controller() {
+
+        barberPanel = new BarberPanel();;
         loginPanel = new LoginPanel();
         signupPanel = new SignupPanel();
         signupFrame = new Frame(500, 400, signupPanel, false);
         loginFrame = new Frame(400, 400, loginPanel);
         bookingsPanel = new BookingPanel();
-        bookingsFrame = new Frame (500, 700, bookingsPanel, false);
-
-
+        bookingsFrame = new Frame(500, 700, bookingsPanel, false);
+        slotesPanel = new SlotesPanel();
 
         assignListenerToSignupButton();
         assignListenerToSigninButton();
         assignListenerToUserTypeComboBox();
         assignListenerToBackToLoginButton();
+        assignseeYourBookingsButtonTobookingpage();
+        //assignListeterToSlotesButton();
 
     }
 
@@ -48,6 +53,21 @@ public class Controller implements ActionListener {
         backToLogin.addActionListener(this);
         backToLogin.setActionCommand("backToLogin");
     }
+
+    private void assignseeYourBookingsButtonTobookingpage() {
+        JButton seeYourBookings = bookingsPanel.getseeYourBookingsButton();
+        seeYourBookings.addActionListener(this);
+        seeYourBookings.setActionCommand("SeeyourBooking");
+
+    }
+
+//    public void assignListeterToSlotesButton() {
+//
+//        JButton slotesTable = barberPanel.getSlotesButton();
+//        slotesTable.addActionListener(this);
+//        slotesTable.setActionCommand("table");
+//        System.out.println(slotesTable instanceof JButton);
+//    }
 
     public void assignListenerToUserTypeComboBox() {
 
@@ -74,7 +94,6 @@ public class Controller implements ActionListener {
         signinButton.setActionCommand("signinTrigger");
     }
 
-
     public void launchSignupWindow() {
         this.signupFrame.setVisible(true);
         this.loginFrame.setVisible(false);
@@ -93,6 +112,7 @@ public class Controller implements ActionListener {
         User user = new User(null, null, email, null, password, null);
 
         DatabaseOperation<User> userDatabaseOperation = new UserDatabaseOperation();
+
         loggedInUser = userDatabaseOperation.select(user);
 
         if (loggedInUser == null) {
@@ -106,7 +126,6 @@ public class Controller implements ActionListener {
             this.signupFrame.setVisible(false);
             populateBookingsPanel();
         }
-
 
     }
 
@@ -123,9 +142,8 @@ public class Controller implements ActionListener {
         String location = signupPanel.getLocationText();
         String fullName = signupPanel.getFullName();
 
-
         User user;
-if (userType.equals("customer")) {
+        if (userType.equals("customer")) {
             user = new Customer(0, fullName, email, phone, password, null);
         } else {
             user = new Barber(0, fullName, email, phone, password, null, location);
@@ -140,17 +158,14 @@ if (userType.equals("customer")) {
             this.loginFrame.setVisible(true);
             this.bookingsFrame.setVisible(false);
 
-
         } else {
             JOptionPane.showMessageDialog(signupPanel, "Failed to register the user ");
         }
-
 
     }
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-
 
         if (actionEvent.getActionCommand().equals("signupTrigger")) {
             launchSignupWindow();
@@ -162,6 +177,14 @@ if (userType.equals("customer")) {
             register();
         } else if (actionEvent.getActionCommand().equals("backToLogin")) {
             backTologin();
+        } //else if (actionEvent.getActionCommand().equals("table")) {
+           // new Frame(800, 700, slotesPanel);
+           
+       // }
+    else if (actionEvent.getActionCommand().equals("SeeyourBooking")) {
+            // Frame myWindowFrame = new Frame (800,700,bookingsPanel);
+            new Frame(400, 500, barberPanel);
+
         } else {
 
         }
@@ -170,5 +193,6 @@ if (userType.equals("customer")) {
     private void backTologin() {
         this.signupFrame.setVisible(false);
         this.loginFrame.setVisible(true);
-        }
     }
+
+}

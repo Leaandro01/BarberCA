@@ -13,15 +13,16 @@ public class BookingPanel extends JPanel {
     private JButton seeYourBookingsButton;
     private SlotesArea slotArea;
     private String userName;
-
-
+    private JPanel leftPanel;
+     private JButton yourbooking;
     public BookingPanel(){
 
         this.searchField = new JTextField(9);
-        this.seeYourBookingsButton = new JButton("See your bookings");
+        this.seeYourBookingsButton = new JButton("Barber Platform");
+        this.yourbooking = new JButton("See your Booking");
         userNameLabel = new JLabel("Hello " +userName);
         // @TODO Fake data -> This is to be retrieved from the database later on
-        String[] dates = new String[]{"10/5/2020 7:00", "10/5/2020 8:00", "10/5/2020 9:00", "10/5/2020 10:00"};
+        String[] dates = new String[]{"20/12/2020 7:00", "20/12/2020 8:00", "20/12/2020 9:00", "20/12/2020 10:00"};
 
         userNameLabel = new JLabel();
 
@@ -59,7 +60,7 @@ public class BookingPanel extends JPanel {
         headerPanel.setLayout(new GridLayout(2,3));
 
 
-        JPanel leftPanel = new JPanel();
+         leftPanel = new JPanel();
         JPanel rightPanel = new JPanel();
 
         leftPanel.setBorder(BorderFactory.createLineBorder(Color.black));
@@ -71,7 +72,7 @@ public class BookingPanel extends JPanel {
         centerPanel.add(rightPanel);
 
 
-        String originalText = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?";
+        String originalText = "To go to barber Platform";
         String[] originalTextArray = originalText.split(" "); // ["Sed", "ut", "perspiciatis", ...]
         String textToChange = "";
 
@@ -90,7 +91,26 @@ public class BookingPanel extends JPanel {
         leftPanel.add(welcomingText);
         leftPanel.add(this.seeYourBookingsButton);
 
+        String originalText1= "See your booking in here! ";
+        String[] originalTextArray1 = originalText1.split(" "); // ["Sed", "ut", "perspiciatis", ...]
+        String textToChange1 = "";
+
+        for(int i = 0; i < originalTextArray1.length; i++){
+            textToChange1 += originalTextArray1[i]+ " ";
+
+            if(i%5 == 0){
+                textToChange1 += "<br>";
+            }
+        }
+
+
+
+        //JLabel welcomingText = new JLabel("");
+        JLabel welcomingText1 = new JLabel("<html><body>"+textToChange1+"</body></html");
+        leftPanel.add(welcomingText1);
+        leftPanel.add(this.yourbooking);
         rightPanel.setLayout(new BorderLayout());
+        
         // @TODO Make the name dymamic. This will come from the controller.
         rightPanel.add(userNameLabel, BorderLayout.NORTH);
         rightPanel.add(this.slotArea);
@@ -104,9 +124,16 @@ public class BookingPanel extends JPanel {
 
     public void setUserName(String userName){
         this.userName = userName;
-        this.userNameLabel.setText("Hello, "+userName);
+        this.userNameLabel.setText("Welcome, "+userName);
 
         validate();
         repaint();
     }
+    
+    public JButton getseeYourBookingsButton(){
+   
+        return seeYourBookingsButton;
+    }
+        
+    
 }
