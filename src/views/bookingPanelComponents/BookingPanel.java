@@ -86,7 +86,7 @@ public class BookingPanel extends JPanel {
 
 
 
-        //JLabel welcomingText = new JLabel("");
+      
         JLabel welcomingText = new JLabel("<html><body>"+textToChange+"</body></html");
         leftPanel.add(welcomingText);
         leftPanel.add(this.seeYourBookingsButton);
@@ -105,7 +105,7 @@ public class BookingPanel extends JPanel {
 
 
 
-        //JLabel welcomingText = new JLabel("");
+      
         JLabel welcomingText1 = new JLabel("<html><body>"+textToChange1+"</body></html");
         leftPanel.add(welcomingText1);
         leftPanel.add(this.yourbooking);
@@ -121,7 +121,7 @@ public class BookingPanel extends JPanel {
         this.add(centerPanel, BorderLayout.CENTER);
 
     }
-
+        // getting the user name from my data base
     public void setUserName(String userName){
         this.userName = userName;
         this.userNameLabel.setText("Welcome, "+userName);
@@ -129,7 +129,7 @@ public class BookingPanel extends JPanel {
         validate();
         repaint();
     }
-    
+    // getter for bookingsbutton
     public JButton getseeYourBookingsButton(){
    
         return seeYourBookingsButton;

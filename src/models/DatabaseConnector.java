@@ -13,15 +13,15 @@ public class DatabaseConnector {
     private String password;
 
     public DatabaseConnector() {
-
-        bankUrl = "52.50.23.197"; // @TODO: Change to "52.50.23.197"
+        //setting the data base that amilcar gave us
+        bankUrl = "52.50.23.197"; 
         bankName = "Rafael_2019335";
-        user = "Rafael_2019335"; // @TODO: Change it to "Rafael_2019335"
-        password = "2019335"; // @TODO: Change it to "2019335"
+        user = "Rafael_2019335"; 
+        password = "2019335"; 
 
 
         try {
-            Class.forName("com.mysql.jdbc.Driver"); // "jdbc:mysql://localhost/barber_system
+            Class.forName("com.mysql.jdbc.Driver"); 
             connection = DriverManager.getConnection("jdbc:mysql://"+bankUrl+"/"+bankName, user, password);
             System.out.println("Conectou no banco de dados.");
         } catch (SQLException ex) {

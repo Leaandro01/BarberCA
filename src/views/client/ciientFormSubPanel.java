@@ -24,14 +24,14 @@ public class ciientFormSubPanel extends JPanel {
     private JPanel buttonPanel;
 
     public ciientFormSubPanel() {
-
+       
         this.emailPanel = new JPanel();
         this.passwordPanel = new JPanel();
         this.fullNamePanel = new JPanel();
         this.phonePanel = new JPanel();
         this.buttonPanel = new JPanel();
 
-         JTextField emailClientTextField = new JTextField(10);
+        JTextField emailClientTextField = new JTextField(10);
         JLabel emailClientLabel = new JLabel("Email");
         this.emailPanel.add(emailClientLabel);
         this.emailPanel.add(emailClientTextField);
@@ -46,27 +46,24 @@ public class ciientFormSubPanel extends JPanel {
         this.phonePanel.add(phonelClientLabel);
         this.phonePanel.add(phoneClientTextField);
 
-       JTextField passwordClientTextField = new JTextField(10);
+        JTextField passwordClientTextField = new JTextField(10);
         JLabel passwordClientLabel = new JLabel("Passowrd");
         this.passwordPanel.add(passwordClientLabel);
         this.passwordPanel.add(passwordClientTextField);
 
         JButton signinButton = new JButton("Signin");
         this.buttonPanel.add(signinButton);
-        
-        
-        
-        this.setLayout(new GridLayout(9,1));
+
+        this.setLayout(new GridLayout(9, 1));
         this.add(new JLabel());
         this.add(new JLabel());
-        this.add(new JLabel());              
+        this.add(new JLabel());
         this.add(this.emailPanel);
         this.add(this.passwordPanel);
         this.add(this.fullNamePanel);
         this.add(this.phonePanel);
-         this.add(this.buttonPanel);        
+        this.add(this.buttonPanel);
         this.add(new JLabel());
-        
-        
+
     }
 }

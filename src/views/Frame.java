@@ -10,7 +10,7 @@ public class Frame extends JFrame {
 
 
     public Frame(int width, int height, JPanel panel) {
-
+//giving a frame to my windows
         this.setSize(width, height);
         this.setVisible(true);
         // @TODO: Later on perhaps bring this action to an ActionListener

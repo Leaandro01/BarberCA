@@ -17,6 +17,7 @@ public class BarberCA {
 
 
     BarberCA(){
+        //getting the controller 
         new Controller();
       //  new Frame(800, 800, new BookingPanel);
 

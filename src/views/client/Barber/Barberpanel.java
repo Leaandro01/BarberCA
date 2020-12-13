@@ -14,35 +14,28 @@ import javax.swing.JPanel;
  * @author User
  */
 public class Barberpanel extends JPanel {
-    
+
     private JPanel northSubPanel;
     private JPanel middleSubPanel;
     private JPanel southSubPanel;
-    
-    
-    
-    public Barberpanel(){
-        
+
+    public Barberpanel() {
+
         this.setLayout(new BorderLayout());
         this.northSubPanel = new JPanel();
         this.middleSubPanel = new BarberFormSubPanel();
         this.southSubPanel = new JPanel();
-    
+
         this.add(this.northSubPanel, BorderLayout.NORTH);
         this.add(this.middleSubPanel, BorderLayout.CENTER);
         this.add(this.southSubPanel, BorderLayout.SOUTH);
-        
-        JLabel northSubPanelLabel = new JLabel("Barber Register");       
-        JLabel southSubPanelLabel = new JLabel ("Almicar CA");
-        
-        
+
+        JLabel northSubPanelLabel = new JLabel("Barber Register");
+        JLabel southSubPanelLabel = new JLabel("Almicar CA");
+
         this.northSubPanel.add(northSubPanelLabel);
         this.southSubPanel.add(southSubPanelLabel);
-        
- 
-    
-    
-    
+
     }
-    
+
 }

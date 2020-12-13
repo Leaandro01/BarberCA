@@ -36,7 +36,7 @@ public class LoginPanel extends JPanel {
 
 
     }
-
+//getter and setter for my buttons 
     public JButton getSignupButton(){
         return middleSubPanel.getSignupButton();
     }

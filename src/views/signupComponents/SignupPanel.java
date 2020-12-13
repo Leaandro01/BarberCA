@@ -5,7 +5,6 @@ import java.awt.*;
 
 public class SignupPanel extends JPanel {
 
-
     private JPanel headersPanel;
     private JPanel middlePanel;
     private JPanel southPanel;
@@ -25,13 +24,12 @@ public class SignupPanel extends JPanel {
     private JButton signup;
     private JButton backToLogin;
 
+    public SignupPanel() {
 
-    public SignupPanel(){
-
-        signup = new JButton( "Register");
-        backToLogin = new JButton( "Back");
+        signup = new JButton("Register");
+        backToLogin = new JButton("Back");
         southPanel = new JPanel();
-        fullNamePanel= new JPanel();
+        fullNamePanel = new JPanel();
 
         fullNameTextField = new JTextField();
         headersPanel = new JPanel();
@@ -44,13 +42,10 @@ public class SignupPanel extends JPanel {
         phoneTextField = new JTextField();
         passwordTextField = new JPasswordField();
 
-
-
-        emailPanel.setLayout(new GridLayout(1,2));
-        locationPanel.setLayout(new GridLayout(1,2));
-        userTypePanel.setLayout(new GridLayout(1,2));
+        emailPanel.setLayout(new GridLayout(1, 2));
+        locationPanel.setLayout(new GridLayout(1, 2));
+        userTypePanel.setLayout(new GridLayout(1, 2));
         locationPanel.setVisible(false);
-
 
         userTypeComboBox = new JComboBox(new String[]{"customer", "service provider"});
 
@@ -80,11 +75,9 @@ public class SignupPanel extends JPanel {
         fullNamePanel.add(new JLabel("Full Name"));
         fullNamePanel.add(fullNameTextField);
 
-
-        fullNamePanel.setLayout( new GridLayout(1,2));
-        phonePanel.setLayout(new GridLayout(1,2));
-        passwordPanel.setLayout(new GridLayout(1,2));
-
+        fullNamePanel.setLayout(new GridLayout(1, 2));
+        phonePanel.setLayout(new GridLayout(1, 2));
+        passwordPanel.setLayout(new GridLayout(1, 2));
 
         phonePanel.add(new JLabel("Phone Number"));
         phonePanel.add(phoneTextField);
@@ -95,19 +88,15 @@ public class SignupPanel extends JPanel {
         middlePanel.add(phonePanel);
         middlePanel.add(locationPanel);
 
-
-
         middlePanel.setLayout(new GridLayout(10, 1));
 
         southPanel.add(new JLabel());
         southPanel.add(backToLogin);
-        southPanel.add( new JLabel());
+        southPanel.add(new JLabel());
         southPanel.add(signup);
         southPanel.add(new JLabel());
 
-        southPanel.setLayout(new GridLayout(1,5));
-
-
+        southPanel.setLayout(new GridLayout(1, 5));
 
         this.setLayout(new BorderLayout());
         this.add(headersPanel, BorderLayout.NORTH);
@@ -119,17 +108,17 @@ public class SignupPanel extends JPanel {
 
     }
 
-    public void changeLocationState(){
+    public void changeLocationState() {
         String selectedUserType = userTypeComboBox.getItemAt(userTypeComboBox.getSelectedIndex()); // customer - service provider
-        if(selectedUserType.equals("customer")){
+        if (selectedUserType.equals("customer")) {
             locationPanel.setVisible(false);
-        }else{
+        } else {
             locationPanel.setVisible(true);
         }
     }
 
-
-    public JComboBox<String> getUserTypeComboBox(){
+    // taking each information for my data base
+    public JComboBox<String> getUserTypeComboBox() {
         return userTypeComboBox;
     }
 
@@ -150,7 +139,7 @@ public class SignupPanel extends JPanel {
     }
 
     public String getPassword() {
-        return new  String(passwordTextField.getPassword());
+        return new String(passwordTextField.getPassword());
     }
 
     public String getLocationText() {

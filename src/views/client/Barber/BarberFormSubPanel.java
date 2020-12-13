@@ -25,6 +25,7 @@ public class BarberFormSubPanel extends JPanel {
     private JPanel buttonPanel;
     private JPanel locationPanel;
 
+    // creating a combobox for barber or client 
     public BarberFormSubPanel() {
         String[] name = {"barber", "client"};
         JComboBox comboBox = new JComboBox(name);
@@ -35,7 +36,7 @@ public class BarberFormSubPanel extends JPanel {
         this.phonePanel = new JPanel();
         this.locationPanel = new JPanel();
         this.buttonPanel = new JPanel();
-
+        //crating each text field and label for my barber panel
         JTextField emailBarberTextField = new JTextField(10);
         JLabel emailBarberLabel = new JLabel("Email");
         this.emailPanel.add(emailBarberLabel);
@@ -68,17 +69,17 @@ public class BarberFormSubPanel extends JPanel {
         this.add(new JLabel());
 
         this.add(comboBox);
-       this.add(new JLabel());
+        this.add(new JLabel());
         this.add(this.emailPanel);
-         this.add(new JLabel());
+        this.add(new JLabel());
         this.add(this.fullNamePanel);
-         this.add(new JLabel());
+        this.add(new JLabel());
         this.add(this.phonePanel);
-         this.add(new JLabel());
+        this.add(new JLabel());
         this.add(this.locationPanel);
-         this.add(new JLabel());
+        this.add(new JLabel());
         this.add(this.passwordPanel);
         this.add(this.buttonPanel);
-      
+
     }
 }

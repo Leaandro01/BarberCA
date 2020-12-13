@@ -23,9 +23,10 @@ public class BaberPlatformSubPanel extends JPanel {
    
     public BaberPlatformSubPanel() {
 
+            
         this.buttonbarberPlatPanel = new JPanel();
-
         this.buttonbarberPlatPanel2 = new JPanel();
+        // getting a for lopp to get my text with space and columns
         String originalText = "Welcome to see your costumer click in the button below";
         String[] originalTextArray = originalText.split(" ");
         String textToChange = "";
@@ -56,6 +57,8 @@ public class BaberPlatformSubPanel extends JPanel {
         this.add(welcomingText2);
         this.add(this.buttonbarberPlatPanel2);
 
+        
+        
         JButton viewCostumer = new JButton("View yours costumers");
         this.buttonbarberPlatPanel.add(viewCostumer);
 
@@ -66,7 +69,7 @@ public class BaberPlatformSubPanel extends JPanel {
         this.add(this.buttonbarberPlatPanel);
         this.add(this.buttonbarberPlatPanel2);
     }
-
+    //getter for the slotstable but i could not finish
     public JButton getSlotesTable() {
 
         return this.slotsTable;

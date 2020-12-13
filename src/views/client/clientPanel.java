@@ -27,7 +27,7 @@ public class clientPanel extends JPanel implements ActionListener {
    
     public clientPanel() {
        
-
+        //creater a client panel and getting the information from ciientFormSubPanel
         this.setLayout(new BorderLayout());
         this.northSubPanel = new JPanel();
         this.middleSubPanel = new ciientFormSubPanel();

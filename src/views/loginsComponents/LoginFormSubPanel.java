@@ -69,15 +69,19 @@ public class LoginFormSubPanel extends JPanel {
     public JButton getSignupButton(){
         return signupButton;
     }
-
+ /**
+     * Getter for the sign button
+     */
     public JButton getSigninButton(){
         return signinButton;
     }
-
+ /**
+     * taking the information from email for my database
+     */
     public String getEmail(){
         return emailTextField.getText();
     }
-
+    //taking the information from password for my database
     public String getPassword(){
         return new String(passwordField.getPassword());
     }

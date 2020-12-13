@@ -42,7 +42,7 @@ public class BarberPanel extends JPanel {
         
 
     }
-    
+    // getter For the button from BaberPlatformSubPanel
     public JButton getSlotesButton() {
 
         return middleSubPanel.getSlotesTable();

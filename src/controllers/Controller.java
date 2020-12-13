@@ -30,6 +30,7 @@ public class Controller implements ActionListener {
 
     public Controller() {
 
+        //instantiating the classes
         barberPanel = new BarberPanel();;
         loginPanel = new LoginPanel();
         signupPanel = new SignupPanel();
@@ -48,19 +49,21 @@ public class Controller implements ActionListener {
 
     }
 
+    //giving a action listener to my login button
     private void assignListenerToBackToLoginButton() {
         JButton backToLogin = signupPanel.getBackToLogin();
         backToLogin.addActionListener(this);
         backToLogin.setActionCommand("backToLogin");
     }
 
+    //giving a action listener to my booking platform
     private void assignseeYourBookingsButtonTobookingpage() {
         JButton seeYourBookings = bookingsPanel.getseeYourBookingsButton();
         seeYourBookings.addActionListener(this);
         seeYourBookings.setActionCommand("SeeyourBooking");
 
     }
-
+//     trying to link the slots button, but i didnt have time to finish it.
 //    public void assignListeterToSlotesButton() {
 //
 //        JButton slotesTable = barberPanel.getSlotesButton();
@@ -68,6 +71,7 @@ public class Controller implements ActionListener {
 //        slotesTable.setActionCommand("table");
 //        System.out.println(slotesTable instanceof JButton);
 //    }
+//giving a action listener to my combobox
 
     public void assignListenerToUserTypeComboBox() {
 
@@ -76,6 +80,7 @@ public class Controller implements ActionListener {
         signupComboBox.setActionCommand("locationTrigger");
 
     }
+//giving a action listener to my sign up Button
 
     public void assignListenerToSignupButton() {
         JButton signupButtonFromLoginPanel = loginPanel.getSignupButton();
@@ -87,6 +92,7 @@ public class Controller implements ActionListener {
         signupButtonFromSignupPanel.setActionCommand("register");
 
     }
+//giving a action listener to my sign button
 
     public void assignListenerToSigninButton() {
         JButton signinButton = loginPanel.getSigninButton();
@@ -141,7 +147,7 @@ public class Controller implements ActionListener {
         String userType = signupPanel.getUserType();
         String location = signupPanel.getLocationText();
         String fullName = signupPanel.getFullName();
-
+       //setting the information for my database
         User user;
         if (userType.equals("customer")) {
             user = new Customer(0, fullName, email, phone, password, null);
@@ -166,7 +172,7 @@ public class Controller implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-
+        // adding a acrtion for each button
         if (actionEvent.getActionCommand().equals("signupTrigger")) {
             launchSignupWindow();
         } else if (actionEvent.getActionCommand().equals("locationTrigger")) {
@@ -178,10 +184,9 @@ public class Controller implements ActionListener {
         } else if (actionEvent.getActionCommand().equals("backToLogin")) {
             backTologin();
         } //else if (actionEvent.getActionCommand().equals("table")) {
-           // new Frame(800, 700, slotesPanel);
-           
-       // }
-    else if (actionEvent.getActionCommand().equals("SeeyourBooking")) {
+        // new Frame(800, 700, slotesPanel);
+        // }
+        else if (actionEvent.getActionCommand().equals("SeeyourBooking")) {
             // Frame myWindowFrame = new Frame (800,700,bookingsPanel);
             new Frame(400, 500, barberPanel);
 
